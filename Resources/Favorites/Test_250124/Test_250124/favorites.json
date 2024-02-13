@@ -1,0 +1,9 @@
+{
+  "version" : "1",
+  "data" : {
+    "time" : false,
+    "m_flow_nominal2" : true,
+    "zon.TAir" : false,
+    "TAirCelcisus2" : true
+  }
+}

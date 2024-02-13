@@ -1,0 +1,56 @@
+{
+  "name": "Projects_Loris",
+  "format": "1.0.0",
+  "dependencies": [
+    {
+      "name": "Modelica",
+      "versionSpecifier": "4.0.0"
+    }
+  ],
+  "content": [
+    {
+      "relpath": "Resources/Views",
+      "contentType": "VIEWS",
+      "defaultDisabled": false,
+      "id": "437024221a064f26a7f84d3b546893f6"
+    },
+    {
+      "relpath": "Resources/Favorites",
+      "contentType": "FAVORITES",
+      "defaultDisabled": false,
+      "id": "41b989d1baba42c2aa0846c64524d1e6"
+    },
+    {
+      "relpath": "Resources/CustomFunctions",
+      "contentType": "CUSTOM_FUNCTIONS",
+      "defaultDisabled": false,
+      "id": "329b28acbcbc4cf08a40f5358dd91412"
+    },
+    {
+      "relpath": "Resources/Custom",
+      "contentType": "GENERIC",
+      "defaultDisabled": false,
+      "id": "faa6ab9299314d6280115edcf370bbed"
+    },
+    {
+      "relpath": "ReferenceResults",
+      "contentType": "REFERENCE_RESULTS",
+      "defaultDisabled": false,
+      "id": "42eef1c7b86341bead6c7d7eec1c7e1a"
+    },
+    {
+      "relpath": "Resources/ExperimentDefinitions",
+      "contentType": "EXPERIMENT_DEFINITIONS",
+      "defaultDisabled": false,
+      "id": "a41b226b692d4cf4987d66dd57837ed8"
+    },
+    {
+      "relpath": "Test_250124",
+      "contentType": "MODELICA",
+      "name": "Test_250124",
+      "defaultDisabled": false,
+      "id": "4f52167dbcea450bba3e5502e7a328ae"
+    }
+  ],
+  "executionOptions": []
+}

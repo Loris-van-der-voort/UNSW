@@ -1,0 +1,35 @@
+within Test_250124;
+model Ventilation_loop
+    .Buildings.ThermalZones.EnergyPlus_9_6_0.ThermalZone zon(nPorts = 2) annotation(Placement(transformation(extent = {{47.477471106571656,19.477471106571656},{72.52252889342834,44.522528893428344}},origin = {0.0,0.0},rotation = 0.0)));
+    .Buildings.Fluid.HeatExchangers.DryCoilEffectivenessNTU hex2 annotation(Placement(transformation(extent = {{12.0,-10.0},{32.0,10.0}},origin = {0.0,0.0},rotation = 0.0)));
+    .Buildings.Fluid.HeatExchangers.DryCoilEffectivenessNTU hex annotation(Placement(transformation(extent = {{-62.0,-9.199999999999996},{-42.0,10.800000000000004}},origin = {0.0,0.0},rotation = 0.0)));
+    .Buildings.Fluid.Sources.Boundary_pT HWsource(nPorts = 1) annotation(Placement(transformation(extent = {{-10.0,-10.0},{10.0,10.0}},origin = {-74.0,-81.19999999999999},rotation = 90.0)));
+    .Buildings.Fluid.Sources.Boundary_pT HWsink(nPorts = 1) annotation(Placement(transformation(extent = {{-10.0,-10.0},{10.0,10.0}},origin = {-36.0,-81.19999999999999},rotation = 90.0)));
+    .Buildings.Experimental.DHC.EnergyTransferStations.BaseClasses.Pump_m_flow pump_m_flow annotation(Placement(transformation(extent = {{-6.55975223852235,-6.55975223852235},{6.55975223852235,6.55975223852235}},origin = {-74.0,-39.199999999999996},rotation = 90.0)));
+    .Buildings.Fluid.Sources.Boundary_pT CWsource(nPorts = 1) annotation(Placement(transformation(extent = {{-10.0,-10.0},{10.0,10.0}},origin = {-2.666666666666666,-82.0},rotation = 90.0)));
+    .Buildings.Experimental.DHC.EnergyTransferStations.BaseClasses.Pump_m_flow pump_m_flow2 annotation(Placement(transformation(extent = {{-6.55975223852235,-6.55975223852235},{6.55975223852235,6.55975223852235}},origin = {-2.666666666666666,-40.00000000000001},rotation = 90.0)));
+    .Buildings.Fluid.Sources.Boundary_pT CWsink(nPorts = 1) annotation(Placement(transformation(extent = {{-10.0,-10.0},{10.0,10.0}},origin = {38.0,-82.0},rotation = 90.0)));
+    .Buildings.Fluid.HeatExchangers.DryCoilEffectivenessNTU hex3 annotation(Placement(transformation(extent = {{-112.0,2.0},{-92.0,22.0}},origin = {0.0,0.0},rotation = 0.0)));
+    .Buildings.Fluid.Sources.Boundary_pT Airsource(nPorts = 1) annotation(Placement(transformation(extent = {{-182.0,-22.0},{-162.0,-2.0}},origin = {0.0,0.0},rotation = 0.0)));
+    .Buildings.Fluid.Sources.Boundary_pT Airsink(nPorts = 1) annotation(Placement(transformation(extent = {{-182.0,8.0},{-162.0,28.0}},origin = {0.0,0.0},rotation = 0.0)));
+    .Buildings.Experimental.DHC.EnergyTransferStations.BaseClasses.Pump_m_flow pump_m_flow3 annotation(Placement(transformation(extent = {{-150.55975223852235,-18.55975223852235},{-137.44024776147765,-5.44024776147765}},origin = {0.0,0.0},rotation = 0.0)));
+    .Buildings.Controls.OBC.CDL.Continuous.Sources.Constant con(k = 0) annotation(Placement(transformation(extent = {{17.20093345755824,33.20093345755824},{26.79906654244176,42.79906654244176}},origin = {0.0,0.0},rotation = 0.0)));
+equation
+    connect(hex.port_b1,hex2.port_a1) annotation(Line(points = {{-42,6.800000000000004},{12,6.800000000000004},{12,6}},color = {0,127,255}));
+    connect(hex2.port_b1,zon.ports[1]) annotation(Line(points = {{32,6},{60,6},{60,20.040984906775932}},color = {0,127,255}));
+    connect(hex.port_a2,HWsink.ports[1]) annotation(Line(points = {{-42,-5.199999999999996},{-36,-5.199999999999996},{-36,-71.19999999999999}},color = {0,127,255}));
+    connect(pump_m_flow.port_b,hex.port_b2) annotation(Line(points = {{-74,-32.640247761477646},{-74,-5.199999999999996},{-62,-5.199999999999996}},color = {0,127,255}));
+    connect(HWsource.ports[1],pump_m_flow.port_a) annotation(Line(points = {{-74,-71.19999999999999},{-74,-45.759752238522346}},color = {0,127,255}));
+    connect(pump_m_flow2.port_b,hex2.port_b2) annotation(Line(points = {{-2.6666666666666647,-33.44024776147766},{-2.6666666666666647,-6},{12,-6}},color = {0,127,255}));
+    connect(CWsource.ports[1],pump_m_flow2.port_a) annotation(Line(points = {{-2.6666666666666643,-72},{-2.6666666666666643,-46.55975223852236}},color = {0,127,255}));
+    connect(hex2.port_a2,CWsink.ports[1]) annotation(Line(points = {{32,-6},{38,-6},{38,-72}},color = {0,127,255}));
+    connect(hex3.port_a2,hex.port_a1) annotation(Line(points = {{-92,6},{-77,6},{-77,6.800000000000004},{-62,6.800000000000004}},color = {0,127,255}));
+    connect(hex3.port_b1,zon.ports[2]) annotation(Line(points = {{-92,18},{60,18},{60,20.040984906775932}},color = {0,127,255}));
+    connect(Airsink.ports[1],hex3.port_a1) annotation(Line(points = {{-162,18},{-112,18}},color = {0,127,255}));
+    connect(Airsource.ports[1],pump_m_flow3.port_a) annotation(Line(points = {{-162,-12},{-150.55975223852235,-12}},color = {0,127,255}));
+    connect(pump_m_flow3.port_b,hex3.port_b2) annotation(Line(points = {{-137.44024776147765,-12},{-124.72012388073883,-12},{-124.72012388073883,6},{-112,6}},color = {0,127,255}));
+    connect(con.y,zon.qGai_flow[1]) annotation(Line(points = {{27.758879850930114,38},{27.758879850930114,38.26126444671417},{46.22521821722882,38.26126444671417}},color = {0,0,127}));
+    connect(con.y,zon.qGai_flow[2]) annotation(Line(points = {{27.758879850930114,38},{40.22521821722882,38},{40.22521821722882,38.26126444671417},{46.22521821722882,38.26126444671417}},color = {0,0,127}));
+    connect(con.y,zon.qGai_flow[3]) annotation(Line(points = {{27.758879850930114,38},{40.22521821722882,38},{40.22521821722882,38.26126444671417},{46.22521821722882,38.26126444671417}},color = {0,0,127}));
+    annotation(Icon(coordinateSystem(preserveAspectRatio = false,extent = {{-100.0,-100.0},{100.0,100.0}}),graphics = {Rectangle(lineColor={0,0,0},fillColor={230,230,230},fillPattern=FillPattern.Solid,extent={{-100.0,-100.0},{100.0,100.0}}),Text(lineColor={0,0,255},extent={{-150,150},{150,110}},textString="%name")}));
+end Ventilation_loop;
