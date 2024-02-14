@@ -1,4 +1,22 @@
 {
   "version" : "1",
-  "data" : { }
+  "data" : {
+    "Heater.m1_flow_nominal" : true,
+    "HeatRecovery.port_a1.h_outflow" : false,
+    "HeatRecovery.port_a1.p" : false,
+    "HeatRecovery.port_a1.m_flow" : false,
+    "HeatRecovery.port_a1.Xi_outflow[1]" : false,
+    "HeatRecovery.port_a2.p" : false,
+    "HeatRecovery.port_a2.m_flow" : false,
+    "HeatRecovery.port_a2.Xi_outflow[1]" : false,
+    "HeatRecovery.port_a2.h_outflow" : false,
+    "HeatRecovery.port_b1.p" : false,
+    "HeatRecovery.port_b1.Xi_outflow[1]" : false,
+    "HeatRecovery.port_b1.h_outflow" : false,
+    "HeatRecovery.port_b1.m_flow" : false,
+    "HeatRecovery.port_b2.p" : false,
+    "HeatRecovery.port_b2.Xi_outflow[1]" : false,
+    "HeatRecovery.port_b2.h_outflow" : false,
+    "HeatRecovery.port_b2.m_flow" : false
+  }
 }

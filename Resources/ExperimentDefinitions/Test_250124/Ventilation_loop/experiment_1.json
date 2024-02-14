@@ -1,6 +1,6 @@
 {
   "version" : "2",
-  "id" : "bb50f4a8-bcea-403e-8a3b-b04143fa9f56",
+  "id" : "3b685d6a-4945-4002-b337-d23b81a4415b",
   "experiment" : {
     "base" : {
       "analysis" : {
@@ -9,19 +9,16 @@
         "choices" : [ {
           "type" : "dynamic",
           "parameters" : {
-            "final_time" : 31536000,
-            "interval" : 3600,
-            "start_time" : 0,
-            "tolerance" : 1.0E-6
+            "final_time" : 3600,
+            "interval" : 60,
+            "start_time" : 0
           },
           "simulationOptions" : {
             "dynamic_diagnostics" : false,
             "ncp" : 500,
             "solver" : "Radau5ODE"
           },
-          "solverOptions" : {
-            "tolerance" : 1.0E-6
-          },
+          "solverOptions" : { },
           "compilerOptions" : {
             "c_compiler" : "gcc",
             "generate_html_diagnostics" : false,
@@ -37,8 +34,8 @@
     }
   },
   "metadata" : {
-    "created" : "2024-02-06 04:35:44.01443007",
-    "lastModified" : "2024-02-14T00:47:34.722891634Z",
-    "name" : "60 sec"
+    "created" : "2024-02-14 00:57:49.861013594",
+    "lastModified" : "2024-02-14T02:47:20.168161001Z",
+    "name" : "Experiment 1"
   }
 }
